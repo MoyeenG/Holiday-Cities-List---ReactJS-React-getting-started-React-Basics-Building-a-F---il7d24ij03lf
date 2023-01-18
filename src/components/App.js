@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div id="main">
         <ol>
-          {filterCity.map((obj, index) => {
+          {filterCity.slice(0, 3).map((obj, index) => {
               return(
                 <li key={`location ${ index + 1 }`}>{ obj.name }</li>
               );
