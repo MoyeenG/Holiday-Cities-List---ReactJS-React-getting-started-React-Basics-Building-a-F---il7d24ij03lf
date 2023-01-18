@@ -37,10 +37,23 @@ class App extends Component {
     ]
   }
 
+  
+ 
+
   render() {
+    const filterCity = this.cityList.filter((obj, index) => 
+      obj.country == "India"
+    )
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+        <ol>
+          {filterCity.map((obj, index) => {
+              return(
+                <li key={`location ${ index + 1 }`}>{ obj.name }</li>
+              );
+            }
+          )}
+        </ol>
       </div>
     )
   }
